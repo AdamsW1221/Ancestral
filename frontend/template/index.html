@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="icon" type="" href="/frontend/favicon.ico">
+    <title>Ancestral</title>
+</head>
+<body id="body" class="bg-[#f9f9fa] transition-all duration-500 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav id="navbar" class="w-full fixed bg-white shadow-md p-4 flex justify-between items-center transition-all duration-500">
+        <h1 class="font-mono text-2xl font-bold text-indigo-500">Ancestral</h1>
+        <!-- Switch -->
+        <div class="checkbox-wrapper-5">
+            <div class="check">
+                <input id="theme-switch" type="checkbox">
+                <label for="theme-switch"></label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow w-screen flex flex-col items-center">
+        <div class="text-indigo-500 mt-20 flex flex-col items-center p-6 rounded-lg w-fit h-fit">
+            <h1 class="font-mono text-5xl font-bold italic flex justify-center">Ancestral</h1>
+            <p class="mt-3">Find out if your information has been leaked.</p>
+            <div class="flex flex-col">
+                <input  class="mt-5 font-semibold text-slate-500 text-center italic focus:outline-none border-none" type="email" id="email" placeholder="Enter your email" autocomplete="off">
+                <p id="error" class="error flex justify-center text-lg mt-2"></p>
+                <button class="bg-indigo-500 text-white rounded-md w-48 h-12 mt-2 cursor-pointer" onclick="checkEmail()">Send</button>
+            </div> 
+        </div>
+        <p id="messageData" class="text-indigo-500 font-bold transition-all duration-500"></p>
+        <div id="results" class="space-y-4 transition-all duration-500 ease-in-out"></div>       
+    </div>
+
+    <div class="mt-auto flex justify-end p-4">
+        <div class="text-sm text-black z-50">
+            <a href="https://github.com/AdamsW1221" target="_blank" rel="noopener noreferrer" class="hover:underline text-indigo-500 font-semibold italic">
+                GitHub: AdamsW1221
+            </a>
+        </div>
+    </div>
+
+    <script src="/backend/main.js"></script>
+</body>
+</html>
